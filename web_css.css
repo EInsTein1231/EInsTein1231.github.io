@@ -98,10 +98,11 @@ a:hover {
     background-image: linear-gradient(to right, 0, 0,0,0);
     box-shadow: 0 4px 3px 0 rgba(49, 196, 190, 0.75);
   border-radius: 10px;
+  z-index: 10;
 }
 
 .nav > .nav-links > a:hover {
-
+  z-index: 10;
   color: white;
   border-radius: 10px;
     background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
@@ -118,7 +119,7 @@ a:hover {
     position: absolute;
     right: 0px;
     top: 0px;
-    padding: 10px 10px;
+    z-index: 199;
   }
   .nav-title img { 
     display: none;
@@ -149,6 +150,7 @@ a:hover {
     overflow-x: hidden;
     top: 50px;
     left: 0px;
+    z-index: 100;
   }
   .nav > .nav-links > a {
     display: block;
@@ -919,14 +921,14 @@ span.psw {
 }
 
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
   span.psw {
      display: block;
      float: none;
   }
   .cancelbtn {
      width: 100%;
-  }
+  } 
 }
 
 
@@ -1176,12 +1178,12 @@ span.psw {
         after { clear: both; }
 
         .login {
-          margin: 50px auto;
+          margin: 0;
           width: 320px;
         }
 
         .login form {
-          margin: auto;
+          margin: 0;
           padding: 22px 22px 22px 22px;
           width: 100%;
           border-radius: 5px;
