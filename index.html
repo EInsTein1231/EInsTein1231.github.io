@@ -104,7 +104,7 @@
 
 
 <br><br>
-<h1 style="text-align: center ; margin-top: 20px; font-size: 50px; text-decoration: underline; margin: 0;"> Shop Christmas Merchandises </h1>
+<a href="Merch.html"><h1 style="text-align: center ; margin-top: 20px; text-decoration: underline; margin: 0;"> Shop Christmas Merchandises</h1></a>
 <br>
 
 
@@ -185,7 +185,7 @@
 <div class="card_background">
 <div class="border_a">
 <div class="slideshow-container">
-<h2 style="text-decoration: underline"> Pokemon Cards </h2>
+<a href="Pokemon_Cards.html"><h2 style="text-decoration: underline"> Pokemon Cards </h2></a>
 </div>
 <div class="flip-card">
   <div class="flip-card-inner">
@@ -400,7 +400,7 @@
                                  <label for="email">Email</label><br>
                                  <input type="text" id="email" name="email" placeholder="Enter email">
                             </div>
-                                 <button style="width: 100px; float: left; text-align: center; background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673); box-shadow: 0 4px 3px 0 rgba(23, 168, 108, 0.75);"><a href="Login.html"> subscribe </a></button> 
+                                 <button id="btn" onclick="display()" style="width: 100px; float: left; text-align: center; background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673); box-shadow: 0 4px 3px 0 rgba(23, 168, 108, 0.75);"><a href="Login.html"> subscribe </a></button> 
                         </div>
                     </div>
                 </div>
@@ -459,35 +459,9 @@
 
 
 
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
+<script src="script.js"></script>
 
 
 

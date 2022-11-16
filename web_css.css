@@ -52,6 +52,24 @@ a:hover {
 }
 
 
+@media screen and (max-width: 500px) {
+  p { 
+    font-size: 12px;
+  }
+  a { 
+    font-size: 12px;
+  }
+  h1 { 
+    font-size: 32px;
+  }
+  h2 { 
+    font-size: 30px;
+  }
+  h3 { 
+    font-size: 25px;
+  }
+} 
+
 
 
 
