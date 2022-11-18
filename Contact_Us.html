@@ -87,14 +87,10 @@ form h2 {
     width:100%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .form_container {
-     margin: 0;
-     width: 90%;
+     width: 79%;
   }
-  .cancelbtn {
-     width: 100%;
-  } 
 }
 
 </style> 
@@ -193,7 +189,7 @@ form h2 {
             </div>
             <div class="form-control">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" cols="34" placeholder="Enter message"></textarea>
+                <textarea id="message" name="message" rows="4" cols="34" placeholder="Enter message" style="width: 100%"></textarea>
                 <small>Error Message</small>
             </div>
 
@@ -291,7 +287,7 @@ form h2 {
                                  <label for="email">Email</label><br>
                                  <input type="text" id="email" name="email" placeholder="Enter email">
                             </div>
-                                 <button style="width: 100px; float: left; text-align: center; background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673); box-shadow: 0 4px 3px 0 rgba(23, 168, 108, 0.75);"><a href="Login.html"> subscribe </a></button> 
+                                 <button id="btn" onclick="display()" style="width: 100px; float: left; text-align: center; background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673); box-shadow: 0 4px 3px 0 rgba(23, 168, 108, 0.75);">subscribe</button> 
                         </div>
                     </div>
                 </div>
@@ -420,7 +416,7 @@ function checkLength(input, min ,max) {
     if(input.value.length < min) {
         showError(input, `${getFieldName(input)} must be at least ${min} characters`);
     }else if(input.value.length > max) {
-        showError(input, `${getFieldName(input)} must be les than ${max} characters`);
+        showError(input, `${getFieldName(input)} must be less than ${max} characters`);
     }else {
         showSucces(input);
     }
@@ -446,6 +442,12 @@ form.addEventListener('submit',function(e) {
     checkEmail(email);
 
 });
+
+function display() { 
+  var email = document.getElementById("email").value;
+  alert(email);
+}
+
 
 </script>
 

@@ -284,7 +284,7 @@ form h2 {
                                  <label for="email">Email</label><br>
                                  <input type="text" id="email" name="email" placeholder="Enter email">
                             </div>
-                                 <button style="width: 100px; float: left; text-align: center; background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673); box-shadow: 0 4px 3px 0 rgba(23, 168, 108, 0.75);"><a href="Login.html"> subscribe </a></button> 
+                                 <button id='btn' style="width: 100px; float: left; text-align: center; background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673); box-shadow: 0 4px 3px 0 rgba(23, 168, 108, 0.75);"><a href="Login.html"> subscribe </a></button> 
                         </div>
                     </div>
                 </div>
@@ -389,7 +389,7 @@ function checkEmail(input) {
     if(re.test(input.value.trim())) {
         showSucces(input)
     }else {
-        showError(input,'Email is not invalid / not entered ');
+        showError(input,'email must have an @ and a .com ');
     }
 }
 
@@ -435,16 +435,23 @@ function checkPasswordMatch(input1, input2) {
 }
 
 
+
 //Event Listeners
 form.addEventListener('submit',function(e) {
     e.preventDefault();
 
     checkRequired([email, password]);
-    checkLength(username,3,15);
+    checkLength(email,6,15);
     checkLength(password,6,25);
     checkEmail(email);
-    checkPasswordMatch(password, password2);
+
 });
+
+
+
+
+
+
 
 </script>
 
