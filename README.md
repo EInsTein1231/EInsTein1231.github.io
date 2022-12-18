@@ -1,4 +1,4 @@
 # EInsTein1231.github.io
 
-<title> Website Pokedexed </title> 
+<h1> Website Pokedexed </h1> 
 <i> An e-commerce website for school assignemnt </i>
